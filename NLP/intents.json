@@ -1,0 +1,29 @@
+{
+    "intents":
+    {
+        "remainder" : [
+            "remaind",
+            "alarm",
+            "alert"
+        ],
+        "question" : [
+            "weather",
+            "date",
+            "formula"
+        ],
+        "status" : [
+            "placements",
+            "placement",
+            "holiday",
+            "events"
+        ],
+        "college" : [
+            "grades",
+            "sem",
+            "holiday",
+            "events"
+        ]
+
+        
+    }
+}
