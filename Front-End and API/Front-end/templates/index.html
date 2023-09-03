@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Microphone Permission</title>
+    <style>
+        .small-image {
+            width: 100px; 
+            height: auto; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the microphone to request permission</h1>
+    
+    <!-- Apply the "small-image" class to the image -->
+    <img id="microphone" class="small-image" src="/static/microphone.png" alt="Microphone Image" onclick="requestMicrophonePermission()">
+    
+    <script>
+        async function requestMicrophonePermission() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                console.log("Microphone permission granted:", stream);
+                // You can handle further actions here
+            } catch (error) {
+                console.error("Error requesting microphone permission:", error);
+            }
+        }
+    </script>
+</body>
+</html>
